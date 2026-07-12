@@ -1,7 +1,6 @@
 import { Logo } from './Logo'
 
 const footerLinks = [
-  { label: 'Documentation', href: '#how-it-works' },
   { label: 'Privacy', href: '#' },
   { label: 'GitHub', href: 'https://github.com', external: true },
   { label: 'Status', href: '#analyze' },

@@ -9,7 +9,6 @@ import { Logo } from './Logo'
 const navLinks = [
   { label: 'Home', href: '/', match: '/' },
   { label: 'Analyze', href: '/analyze', match: '/analyze' },
-  { label: 'About', href: '/#how-it-works' },
   { label: 'GitHub', href: 'https://github.com', external: true },
 ]
 
@@ -35,18 +34,6 @@ export function Navbar() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium text-on-surface-variant transition-colors hover:text-on-surface"
-                >
-                  {link.label}
-                </a>
-              )
-            }
-
-            if (link.href.startsWith('/#')) {
-              return (
-                <a
-                  key={link.label}
-                  href={link.href}
                   className="text-sm font-medium text-on-surface-variant transition-colors hover:text-on-surface"
                 >
                   {link.label}

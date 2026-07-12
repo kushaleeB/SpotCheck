@@ -1,5 +1,4 @@
 import { ClassificationGuide } from '@/components/ClassificationGuide'
-import { Features } from '@/components/Features'
 import { Footer } from '@/components/Footer'
 import { Hero } from '@/components/Hero'
 import { HomeAnalyze } from '@/components/HomeAnalyze'
@@ -11,7 +10,6 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <Features />
         <HomeAnalyze />
         <ClassificationGuide />
       </main>

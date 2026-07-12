@@ -31,9 +31,6 @@ export function Hero() {
                 Start Analyzing
               </Button>
             </Link>
-            <a href="#how-it-works">
-              <Button variant="secondary">How it works</Button>
-            </a>
           </div>
         </div>
 
