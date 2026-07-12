@@ -1,4 +1,7 @@
-"""Shared ML helpers for SpotCheck serverless prediction."""
+"""Shared ML helpers for optional local Python verification.
+
+Production inference runs in Next.js (`app/api/predict` + `lib/ml/infer.ts`).
+"""
 
 from __future__ import annotations
 
@@ -40,7 +43,6 @@ def _scores_to_probabilities(model, features) -> np.ndarray:
 
 @lru_cache(maxsize=1)
 def load_artifacts():
-    """Load model + vectorizer once per warm serverless instance."""
     vectorizer = joblib.load(MODELS_DIR / "vectorizer.pkl")
     model = joblib.load(MODELS_DIR / "model.pkl")
     labels = list(getattr(model, "classes_", []))

@@ -1,6 +1,6 @@
-"""Local-only stdlib HTTP server so `npm run dev` can call the ML model.
+"""Optional local Python ML server for parity checks against the Next.js API.
 
-Production uses api/predict.py on Vercel — this file is not deployed as a function.
+Production uses app/api/predict (TypeScript). This file is not deployed.
 """
 
 from __future__ import annotations
@@ -10,10 +10,9 @@ import sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-# Allow `from _ml import ...` when run as `python api/local_server.py`
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from _ml import predict_review  # noqa: E402
+from ml_core import predict_review  # noqa: E402
 
 HOST = "127.0.0.1"
 PORT = 8000

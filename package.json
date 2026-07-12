@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node scripts/dev.mjs",
-    "dev:web": "next dev",
-    "dev:api": "python api/local_server.py",
+    "dev": "next dev",
+    "dev:python": "node scripts/dev.mjs",
+    "dev:api": "python python/local_server.py",
+    "export:model": "python scripts/export_model_json.py",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

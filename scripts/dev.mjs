@@ -42,7 +42,7 @@ function run(command, args, name) {
 }
 
 const python = resolvePython()
-const api = run(python, ['api/local_server.py'], 'ml')
+const api = run(python, ['python/local_server.py'], 'ml')
 const next = run('npx', ['next', 'dev'], 'next')
 
 function shutdown() {
